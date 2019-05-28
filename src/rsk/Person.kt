@@ -19,6 +19,12 @@ class Student(firstName: String, lastName: String, _id:Int, var tutor: String) :
 
     }
 
+    fun enrole(courseName: String) {
+        val course = Courses.allCourses
+            .filter { it.Title == courseName }
+            .firstOrNull()
+    }
+
     override fun getAddress(): String {
         return ""
     }
